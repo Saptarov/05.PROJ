@@ -32,6 +32,15 @@ bool Widget::addChild(sptr<Widget>& childWidget) {
     return false;
 }
 
+bool Widget::removeChild(std::string name) {
+    auto iter = _childs.find(name);
+    if (iter != _childs.end()) {
+        _childs.erase(iter);
+        return true;
+    }
+    return false;
+}
+
 template <typename T>
 auto Widget::findChild(std::string name) {
     auto iter = _childs.find(name);

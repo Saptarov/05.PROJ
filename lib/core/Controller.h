@@ -6,6 +6,10 @@ class Controller
 {
     Model* _model;
 public:
+
+    /*
+     * @brief controlling widget
+    */
     Controller(Model* model);
 };
 

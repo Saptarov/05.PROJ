@@ -8,16 +8,40 @@
 class IpApp : public Application
 {
 public:
+
+    /*
+     * @brief constructor of main window
+    */
     IpApp();
+
+    /*
+     * @brief showing main window
+    */
     void show();
+
+    /*
+     * @brief creating blank document
+    */
     void createNew();
+
+    /*
+     * @brief importing file data to buffer
+    */
     void importFile();
+
+    /*
+     * @brief export buffer to file
+    */
     void exportFile();
+
+    /*
+     * @brief create button
+    */
     void createGraphic();
     void removeGraphic();
 
 private:
-    Button* button;
+    sptr<Widget> button;
     std::string buffer;
     FileManager _fileManager;
 };
