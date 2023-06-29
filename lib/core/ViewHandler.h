@@ -5,6 +5,10 @@
 class ViewHandler
 {
 protected:
+
+    /*
+     * @brief Handler for View
+    */
     ViewHandler(IView* view);
     void udateView(ModelData* modelData);
 private:
